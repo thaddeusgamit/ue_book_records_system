@@ -45,14 +45,14 @@ if (isset($_GET['bid'])) {
         exit();
     } else {
 
-        $select_file = "SELECT `front`, `back` FROM `books` WHERE title = '$title' ";
+         $select_file = "SELECT `front`, `back` FROM `books` WHERE title = '$title' ";
         $run_select = mysqli_query($conn, $select_file);
         $row = mysqli_fetch_array($run_select);
         
         $front =  $row['front'];
         $back =  $row['back'];
 
-        if (unlink("book/" . $front) && unlink("book/" . $back)) {
+        if (unlink("book/" . $front) || unlink("book/" . $back)) {
 
             $delete_reports = "DELETE FROM `books` WHERE title = '$title'";
             $run_delete = mysqli_query($conn, $delete_reports);
@@ -63,6 +63,15 @@ if (isset($_GET['bid'])) {
               </script>";
                 exit();
             }
+        } else{
+              $delete_reports = "DELETE FROM `books` WHERE title = '$title'";
+            $run_delete = mysqli_query($conn, $delete_reports);
+            if ($run_delete) {
+                echo "
+              <script type = 'text/javascript'>
+              window.location = 'dashboard.php';
+              </script>";
+
         }
     }
 }

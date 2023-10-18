@@ -16,7 +16,7 @@ include('./connection.php');
     <link rel="stylesheet" href="./assets/css/preloader.css">
     <link rel="stylesheet" href="./assets/css/template.css">
     <link rel="stylesheet" href="./assets/sweetalert2/dist/sweetalert2.min.js">
-    <title>Register</title>
+    <title>UE Share-a-books Project</title>
 </head>
 <style>
     .bg {

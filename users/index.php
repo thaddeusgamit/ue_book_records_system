@@ -10,16 +10,17 @@ include "../admin/connection.php";
   <meta name="description" content="" />
   <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors" />
   <meta name="generator" content="Hugo 0.108.0" />
-  <title> UE Shared A book</title>
+  <title>UE-LSG Share-A-Book Project</title>
 
   <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/" />
 
   <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
-
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="../assets/css/bootstrap.min.css" />
   <link rel="stylesheet" href="../assets/css/lineicons.css" />
   <link rel="stylesheet" href="../assets/css/materialdesignicons.min.css" />
   <link rel="stylesheet" href="../assets/css/main.css" />
+  
   <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs5/dt-1.13.2/datatables.min.css" />
 
   <style>
@@ -74,6 +75,10 @@ include "../admin/connection.php";
       white-space: nowrap;
       -webkit-overflow-scrolling: touch;
     }
+
+     html {
+      scroll-behavior: smooth;
+    }
   </style>
 
   <!-- Custom styles for this template -->
@@ -85,7 +90,7 @@ include "../admin/connection.php";
     <nav class="navbar navbar-expand-md fixed-top" style="background-color: #6f1ab6">
       <div class="container-fluid">
         <div class="container">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand" href="index.php">
             <img src="../assets/images/pictures/ue-law.png" alt="Bootstrap" width="60" height="60" />
           </a>
         </div>
@@ -99,7 +104,10 @@ include "../admin/connection.php";
               <a class="nav-link active text-white" aria-current="page" href="#">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link text-light" href="#">About</a>
+              <a class="nav-link text-light" href="#books">Books</a>
+            </li>
+              <li class="nav-item">
+              <a class="nav-link text-light" href="../admin/login.php">Admin</a>
             </li>
           </ul>
         </div>
@@ -116,54 +124,31 @@ include "../admin/connection.php";
       </div>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="#777" />
-          </svg>
+            <img src="../assets/images/pictures/slide1.png"  class="mx-auto d-block" height = "100%" width = "100%" alt="" />
           <div class="container">
             <div class="carousel-caption text-start">
-              <h1>Example headline.</h1>
-              <p>
-                Some representative placeholder content for the first slide of
-                the carousel.
-              </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#">Sign up today</a>
-              </p>
+              
             </div>
           </div>
         </div>
         <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
-            <rect width="100%" height="100%" fill="#777" />
-          </svg>
+           <img src="../assets/images/pictures/slide2.jpg"  class="mx-auto d-block" height = "100%" width = "100%" alt="" />
           <div class="container">
             <div class="carousel-caption">
-              <h1>Another example headline.</h1>
-              <p>
-                Some representative placeholder content for the second slide
-                of the carousel.
-              </p>
-              <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+             
+             
             </div>
           </div>
         </div>
-        <div class="carousel-item">
-          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+         <!-- <div class="carousel-item">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid                     slice" focusable="false">
             <rect width="100%" height="100%" fill="#777" />
           </svg>
           <div class="container">
             <div class="carousel-caption text-end">
-              <h1>One more for good measure.</h1>
-              <p>
-                Some representative placeholder content for the third slide of
-                this carousel.
-              </p>
-              <p>
-                <a class="btn btn-lg btn-primary" href="#">Browse gallery</a>
-              </p>
             </div>
-          </div>
-        </div>
+          </div> 
+        </div>-->
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -243,7 +228,7 @@ include "../admin/connection.php";
 
         <div class="row featurette">
           <div class="card-style mb-30">
-            <h2 class="mb-10" style="color:#ff0032">Books</h2>
+            <h2 class="mb-10" style="color:#ff0032" id="books">Books</h2>
 
             <div id="link_wrapper" class="table-wrapper table-responsive">
               <table id="table" class="table table-hover">
@@ -276,46 +261,46 @@ include "../admin/connection.php";
         <div class="row featurette">
           <div class="col-md-7 order-md-2">
             <h2 class="featurette-heading fw-normal lh-1">
-              Oh yeah, it’s that good.
-              <span class="text-muted">See for yourself.</span>
-            </h2>
-            <p class="lead">
-              Another featurette? Of course. More placeholder content here to
-              give you an idea of how this layout would work with some actual
-              real-world content in place.
+              UE Law Student Government Officers for AY 2022-2023
+               <p class="lead">
+
+               Borromeo | Ibay | Rodriguez | Tuyay | Guerrero | Jacalne | Mayo | Agcaoili | Tiu | Magallon | Tadal | Fernandez
+             
             </p>
+                <br>
+             <p class="lead">
+
+              Development | Representation | Inclusivity | Fruition | Transcendence
+             
+            </p>
+             
           </div>
           <div class="col-md-5 order-md-1">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
+           <img src="../assets/images/pictures/main1.jpg"  class="mx-auto d-block" height = "100%" width = "100%" alt="" />
           </div>
         </div>
 
         <hr class="featurette-divider" />
 
-        <div class="row featurette">
+
+ <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading fw-normal lh-1">
-              And lastly, this one. <span class="text-muted">Checkmate.</span>
+              UE-LSG Share-A-Book Project
             </h2>
             <p class="lead">
-              And yes, this is the last block of representative placeholder
-              content. Again, not really intended to be actually read, simply
-              here to give you a better view of what this would look like with
-              some actual content. Your content.
+             The UE Law Student Government sends it utmost gratitude to USec. 
+             Gerard L. Chan for the book donations for our Share-a-Book Project to add 
+             to our student resources to be shared in the UE Law Community. Padayon!
             </p>
           </div>
           <div class="col-md-5">
-            <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false">
-              <title>Placeholder</title>
-              <rect width="100%" height="100%" fill="#eee" />
-              <text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text>
-            </svg>
+
+         <img src="../assets/images/pictures/main2.JPG"  class="mx-auto d-block" height = "100%" width = "100%" alt="" />
+         
           </div>
-        </div>
+        </div> 
+        
 
         <hr class="featurette-divider" />
 
@@ -338,64 +323,42 @@ include "../admin/connection.php";
             <div class="col-md-6 mt-md-0 mt-3">
 
               <!-- Content -->
-              <h5 class="text-uppercase" style="color: #ff0032;">Footer Content</h5>
-              <p>Here you can use rows and columns to organize your footer content.</p>
+              <h5 class="text-uppercase" style="color: #ff0032;">University of The East</h5>
+              <p>Tomorrow Begins in the East.</p>
+              <br>
+             <p>2219 C.M. Recto Avenue, Brgy. 404, Zone 41, Sampaloc, Manila, Philippines</p>
 
             </div>
             <!-- Grid column -->
 
-            <hr class="clearfix w-100 d-md-none pb-3">
+            <hr class="clearfix w-100 d-md-none pb-4">
 
             <!-- Grid column -->
             <div class="col-md-3 mb-md-0 mb-3">
 
               <!-- Links -->
-              <h5 class="text-uppercase">Links</h5>
+              <h5 class="text-uppercase">Social Links</h5>
 
               <ul class="list-unstyled">
                 <li>
-                  <a href="#!">Link 1</a>
+                  <a href="https://www.facebook.com/uelawstudentgovernment"> <i class="bi bi-facebook"></i> UE Law Student Government</a>
                 </li>
                 <li>
-                  <a href="#!">Link 2</a>
+                  <a href="https://www.youtube.com/@uelawstudentgovernment" style="color: #ff0032;"> <i class="bi bi-youtube"></i> UE Law Student Government </i></a>
                 </li>
                 <li>
-                  <a href="#!">Link 3</a>
+                <p style="color: #3778FB;"> <i class="bi bi-google"></i> uelawstudentgovernment@gmail.com</p>
                 </li>
-                <li>
-                  <a href="#!">Link 4</a>
-                </li>
+
+               
               </ul>
 
             </div>
             <!-- Grid column -->
 
             <!-- Grid column -->
-            <div class="col-md-3 mb-md-0 mb-3">
-
-              <!-- Links -->
-              <h5 class="text-uppercase">Links</h5>
-
-              <ul class="list-unstyled">
-                <li>
-                  <a href="#!">Link 1</a>
-                </li>
-                <li>
-                  <a href="#!">Link 2</a>
-                </li>
-                <li>
-                  <a href="#!">Link 3</a>
-                </li>
-                <li>
-                  <a href="#!">Link 4</a>
-                </li>
-              </ul>
-
-            </div>
-            <!-- Grid column -->
-
-          </div>
-          <!-- Grid row -->
+            
+            
 
         </div>
         <!-- Footer Links -->
